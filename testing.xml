@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testing OrangeHRM Web Portal">
+    <test name="Leave Module Automation">
+    	<classes>
+        	<class name="com.orangehrm.leave.login.Login"/>
+        	<class name="com.orangehrm.leave.accessrights.AccessPrivelages"/>
+        	<class name="com.orangehrm.leave.reports.LeaveEntitlementsUsageReport"/>
+        	<class name="com.orangehrm.leave.entitlements.AddEntitlements"/>
+			<class name="com.orangehrm.leave.entitlements.EmployeeEntitlements"/>
+			<class name="com.orangehrm.leave.entitlements.MyEntitlements"/>
+        	<class name="com.orangehrm.leave.applyleave.ApplyLeave"/>
+        	<class name="com.orangehrm.leave.myleave.MyLeave"/>
+        	<class name="com.orangehrm.leave.leaveaction.LeaveAction"/>
+        	<class name="com.orangehrm.leave.assignleave.AssignLeave"/>
+			<!--<class name="com.orangehrm.leave.configure.Configure"/>-->
+        </classes>
+    </test>
+</suite>
