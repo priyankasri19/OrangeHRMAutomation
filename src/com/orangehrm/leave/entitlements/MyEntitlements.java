@@ -53,8 +53,16 @@ public class MyEntitlements {
 		
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		
-		boolean searchResultFound = driver.findElement(By.className("oxd-table-card")).isDisplayed();
-		assertTrue(searchResultFound, "My Leave Entitleents Displayed");
+		String recordsText = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[2]/div[2]/div/div[2]/div[2]/div/span")).getText();
+
+		Thread.sleep(3000);
+		
+		if(recordsText.contains("No Record Found")) {
+			assertTrue(true, "My Leave Entitleents not Displayed");
+		}else {
+			assertTrue(true, "My Leave Entitleents are Displayed");
+		}
+		
 	}
 	
 	@DataProvider

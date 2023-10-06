@@ -27,7 +27,7 @@ WebDriver driver;
 		driver.get(OrangeHRMConstants.loginURL);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(2, TimeUnit.SECONDS);
-		//Thread.sleep(1000);
+		Thread.sleep(1000);
 	}
 	
 	@Test(dataProvider = "validCredentials")
